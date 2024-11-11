@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon._2411;
 
 import java.util.HashMap;
 import java.util.Scanner;

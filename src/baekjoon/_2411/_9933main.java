@@ -1,7 +1,6 @@
-package baekjoon;
+package baekjoon._2411;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 import java.util.Scanner;
 
