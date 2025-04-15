@@ -1,22 +1,12 @@
-# 입력 받기
-n, game_type = input().split()
-n = int(n)
+import sys
+input = sys.stdin.readline
 
-# 중복 제거를 위해 set 사용
-players = set()
-for _ in range(n):
-    name = input()
-    players.add(name)
+n, game = input().split()
+required = {'Y': 2, 'F': 3, 'O': 4}[game]  # 딕셔너리로 바로 맵핑
 
-# 게임에 필요한 최소 인원 수 계산
-if game_type == 'Y':
-    required = 2
-elif game_type == 'F':
-    required = 3
-elif game_type == 'O':
-    required = 4
+players = set()  # 중복 없이 저장
 
-# 필요한 인원 수에서 임스를 뺀 나머지가 함께할 사람 수
-max_games = len(players) // (required - 1)
+for _ in range(int(n)):
+    players.add(input().strip())  # strip()으로 개행 제거
 
-print(max_games)
+print(len(players) // (required - 1))
